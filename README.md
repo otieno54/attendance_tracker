@@ -1,4 +1,4 @@
-# attendance_tracker
+# Attendance_tracker
  Attendance Tracker is a system designed to monitor, record, and manage the presence of individuals in a particular setting, like schools, workplaces, or training programs. It helps automate the process of taking attendance, reducing errors, saving time, and providing insights into attendance patterns.
 
 
