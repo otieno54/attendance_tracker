@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Attendance Tracker</h2>
+    <div href="teacherhomepage.html" class="nav-link">🏠 Home</div>
+    <div href="classes.html" class="nav-link">📚 Classes</div>
+    <div href="attendance.html" class="nav-link ">📅 Attendance</div>
+    <div href="report.html" class="nav-link">📊 Reports</div>
+    <div href="settings.html" class="nav-link active">⚙️ Settings</div>
+
+    <div class="footer-links">
+      <a href="#">📩 Feedback</a>
+      <a href="#">❓ Help</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Settings</h1>
+
+    <!-- Theme Selection -->
+    <div class="setting">
+      <label for="theme">Choose Theme:</label>
+      <select id="theme" name="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
+
+    <!-- Notification Settings -->
+    <div class="setting">
+      <label for="notifications">Enable Notifications:</label>
+      <input type="checkbox" id="notifications" name="notifications">
+    </div>
+
+    <!-- Language Settings -->
+    <div class="setting">
+      <label for="language">Select Language:</label>
+      <select id="language" name="language">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="nl">Nederlands</option>
+      </select>
+    </div>
+
+    <!-- Save Button -->
+    <button class="save-btn">Save Settings</button>
+  </div>
+
+</body>
+</html>

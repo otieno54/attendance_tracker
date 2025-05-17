@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Attendance</title>
+  <link rel="stylesheet" href="viewattendance.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>📚 Student Portal</h2>
+    <ul>
+        <li class="active">🏠 Home</li>
+        <li><a href="viewattendance.html">📅 Attendance</a></li>
+        <li><a href="courses.html">📜 Courses</a></li>
+        <li><a href="enroll.html">➕ Enroll</a></li>
+        <li><a href="settings.html">⚙️ Settings</a></li>
+        <li><a href="help.html">❓ Help</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h1>📅 Attendance Tracker</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="attendance-body">
+        <!-- Data will be inserted here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const attendanceRecords = [
+      { date: "2025-04-01", status: "Present" },
+      { date: "2025-04-02", status: "Absent" },
+      { date: "2025-04-03", status: "Present" },
+      { date: "2025-04-04", status: "Present" },
+      { date: "2025-04-05", status: "Absent" }
+    ];
+
+    const tableBody = document.getElementById('attendance-body');
+
+    attendanceRecords.forEach(record => {
+      const row = document.createElement('tr');
+
+      const dateCell = document.createElement('td');
+      dateCell.textContent = record.date;
+
+      const statusCell = document.createElement('td');
+      statusCell.textContent = record.status;
+      statusCell.className = record.status === 'Present' ? 'present' : 'absent';
+
+      row.appendChild(dateCell);
+      row.appendChild(statusCell);
+
+      tableBody.appendChild(row);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Dashboard</title>
+    <link rel="stylesheet" href="t_homepage.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+              <h2>Attendance Tracker</h2>
+            </div>
+            <a href="index.html" class="nav-link">🏠 Home</a>
+            <a href="classes.html" class="nav-link">📚 Classes</a>
+            <a href="attendance.html" class="nav-link">📅 Attendance</a>
+            <a href="report.html" class="nav-link active">📊 Reports</a>
+            <a href="settings.html" class="nav-link">⚙️ Settings</a>
+          </nav>
+          <div class="footer-links">
+            <a href="feedback.html">📩 Feedback</a>
+            <a href="help.html">❓ Help</a>
+          </div>
+          </aside>
+        <main class="content">
+            <header>
+                <h1>Welcome back, Dr. Shem</h1>
+                <p>Here's a quick overview of your classes and attendance tasks.</p>
+            </header>
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="actions">
+                    <button class="button primary">Today's schedule</button>
+                    <button class="button secondary">Mark Attendance</button>
+                </div>
+            </section>
+            <section class="today-schedule">
+                <h2>Today's Schedule</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Subject</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Physics 101</td>
+                            <td>General Physics I</td>
+                            <td>9:00 AM - 10:30 AM</td>
+                            <td class="status scheduled">Scheduled</td>
+                        </tr>
+                        <tr>
+                            <td>Calculus II</td>
+                            <td>Advanced Calculus</td>
+                            <td>11:00 AM - 12:30 PM</td>
+                            <td class="status scheduled">Scheduled</td>
+                        </tr>
+                        <tr>
+                            <td>History of Science</td>
+                            <td>World History of Science</td>
+                            <td>1:30 PM - 3:00 PM</td>
+                            <td class="status scheduled">Scheduled</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="all-classes">
+                <h2>All Classes</h2>
+                <ul>
+                    <li>
+                        <h3>Physics 101</h3>
+                        <p>General Physics I - Fall 2024</p>
+                    </li>
+                    <li>
+                        <h3>Calculus II</h3>
+                        <p>Advanced Calculus - Fall 2024</p>
+                    </li>
+                    <li>
+                        <h3>History of Science</h3>
+                        <p>World History of Science - Fall 2024</p>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

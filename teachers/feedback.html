@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback</title>
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Attendance Tracker</h2>
+    <div  class="nav-link">🏠 Home</div>
+    <div class="nav-link">📚 Classes</div>
+    <div class="nav-link ">📅 Attendance</div>
+    <div class="nav-link">📊 Reports</div>
+    <div class="nav-link">⚙️ Settings</div>
+
+    <div class="footer-links">
+      <a href="#">📩 Feedback</a>
+      <a href="#">❓ Help</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Feedback</h1>
+    <p>We value your feedback! Please let us know what you think about the platform.</p>
+
+    <!-- Feedback Form -->
+    <form id="feedback-form" action="#" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="feedback">Your Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="5" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="rating">Rating (1 to 5):</label>
+        <select id="rating" name="rating" required>
+          <option value="1">1 - Poor</option>
+          <option value="2">2 - Fair</option>
+          <option value="3">3 - Good</option>
+          <option value="4">4 - Very Good</option>
+          <option value="5">5 - Excellent</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Feedback</button>
+    </form>
+  </div>
+
+</body>
+</html>

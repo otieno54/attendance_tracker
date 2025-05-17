@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Reports</title>
+  <link rel="stylesheet" href="report.css">
+  <script>
+    function downloadReport() {
+      const startDate = document.getElementById("startDate").value;
+      const endDate = document.getElementById("endDate").value;
+  
+      // Check if both dates are provided
+      if (!startDate || !endDate) {
+        alert("Please select a date range.");
+        return;
+      }
+  
+      const rows = [
+        ["Student Name", "Course", "Date", "Status"],
+        ["Alice Johnson", "Calculus 201", "2025-04-06", "Present"],
+        ["Bob Smith", "Physics 101", "2025-04-06", "Absent"],
+        ["Carla Mendes", "English Literature 302", "2025-04-06", "Present"],
+        ["David Lee", "Chemistry 101", "2025-04-05", "Present"],
+        ["Eva Green", "Biology 201", "2025-04-07", "Absent"]
+      ];
+  
+      // Filter the rows based on the selected date range
+      const filteredRows = rows.filter(row => {
+        const date = row[2];
+        return date >= startDate && date <= endDate;
+      });
+  
+      // If no data matches the date range
+      if (filteredRows.length === 0) {
+        alert("No records found for the selected date range.");
+        return;
+      }
+  
+      const csvContent = "data:text/csv;charset=utf-8," 
+        + filteredRows.map(e => e.join(",")).join("\n");
+  
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "attendance_report.csv");
+      document.body.appendChild(link);
+      link.click();
+    }
+  </script>
+  
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Attendance Tracker</h2>
+    <div  class="nav-link">🏠 Home</div>
+    <div class="nav-link">📚 Classes</div>
+    <div class="nav-link">📅 Attendance</div>
+    <div class="nav-link active">📊 Reports</div>
+    <div class="nav-link">⚙️ Settings</div>
+
+    <div class="footer-links">
+      <a href="#">📩 Feedback</a>
+      <a href="#">❓ Help</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Attendance Reports</h1>
+    <p>Select a date range to download the attendance report:</p>
+
+    <!-- Date Range Selection -->
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate">
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate">
+
+    <p>Click the button below to download your filtered attendance report.</p>
+    <button class="download-btn" onclick="downloadReport()">⬇️ Download Report</button>
+  </div>
+
+</body>
+</html>

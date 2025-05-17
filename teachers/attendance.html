@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Tracker - Mark Attendance</title>
+  <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Attendance Tracker</h2>
+    <div  class="nav-link">🏠 Home</div>
+    <div class="nav-link">📚 Classes</div>
+    <div class="nav-link active">📅 Attendance</div>
+    <div class="nav-link">📊 Reports</div>
+    <div class="nav-link">⚙️ Settings</div>
+
+    <div class="footer-links">
+      <a href="#">📩 Feedback</a>
+      <a href="#">❓ Help</a>
+    </div>
+  </div>
+
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Mark Attendance</h1>
+
+    <form class="attendance-form">
+      <div class="form-group">
+        <label for="course">Select Student</label>
+        <select id="course" name="course">
+          <option>Phoebe Kaara</option>
+          <option>Jack Heaton</option>
+          <option>Neema kinya</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Select Status</label>
+        <div class="radio-group">
+          <label><input type="radio" name="status" value="present"> Present</label>
+          <label><input type="radio" name="status" value="absent"> Absent</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date">
+      </div>
+
+      <button type="submit">Submit Attendance</button>
+    </form>
+  </div>
+
+</body>
+</html>

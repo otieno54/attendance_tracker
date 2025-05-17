@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    height: 100vh;
+    background-color: #f9fafb;
+  }
+  
+  .sidebar {
+    width: 240px;
+    background-color: #f1f5f9;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    position: relative;
+  }
+  
+  .sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    gap: 10px;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    font-weight: bold;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .attendance-form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .form-group select,
+  .form-group input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .radio-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .radio-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  button {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #1e40af;
+  }
+  
+  .footer-links {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .footer-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #888;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  

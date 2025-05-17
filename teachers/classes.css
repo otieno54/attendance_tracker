@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    height: 100vh;
+    background-color: #f9fafb;
+  }
+  
+  .sidebar {
+    width: 240px;
+    background-color: #f1f5f9;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    position: relative;
+  }
+  
+  .sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    gap: 10px;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    font-weight: bold;
+  }
+  
+  .footer-links {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .footer-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #888;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  .main-content h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .class-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .class-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .class-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .class-card h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #1e293b;
+  }
+  
+  .class-card p {
+    margin-bottom: 8px;
+    color: #475569;
+  }
+  
+  .class-card button {
+    margin-top: 10px;
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .class-card button:hover {
+    background-color: #1e40af;
+  }
+  
